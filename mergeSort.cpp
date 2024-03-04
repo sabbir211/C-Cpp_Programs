@@ -3,7 +3,6 @@ using namespace std;
 
 void printArr(int arr[], int start, int end)
 {
-    cout << "start=" << start << " end=" << end << endl;
     for (int i = start; i <= end; i++)
     {
         cout << arr[i] << " ";
@@ -13,8 +12,6 @@ void printArr(int arr[], int start, int end)
 
 void merge(int arr[], int start, int end, int mid)
 {
-    cout << mid << endl;
-    printArr(arr, start, end);
 
     int n1 = mid - start + 1;
     int n2 = end - mid;
@@ -81,6 +78,7 @@ int main()
     int start = 0;
     int end = size - 1;
     mergeSort(arr, start, end);
+    printArr(arr, start, end);
 
     return 0;
 }
